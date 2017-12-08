@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>ค้นหารายการส่งเงินสมทบปกติส่วนที่ขาด</title>
+  <link rel="stylesheet" href="CSS/CSS.css">
+</head>
+
+<body>
+   <div class="flex-container">
+    <header>
+        <section>
+            <div><img src="image/apple-touch-icon.jpg" width="150px" height="150px"></div>
+            <h2>ระบบสารสนเทศและฐานข้อมูล</h2>
+        </section>
+    </header>
+
+<!--manu bar-->
+
+<nav class="nav">
+    <ul>
+    <li><a href="#home">เมนูหลัก</a></li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">บริหาร</a>
+        <div class="dropdown-content">
+            <a href="#">ทะเบียนหนังสือรับ</a>
+            <a href="#">ทะเบียนหนังสือส่ง</a>
+            <a href="#">เลขคุรุภัณฑ์</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">รายได้</a>
+        <div class="dropdown-content">
+            <a href="DisplayAddData.html">เพิ่มรายการส่งเงินสมทบปกติ</a>
+            <a href="DisplayAddDataMoney_Not_Paid_Enough.html">เพิ่มรายการส่งเงินสมทบส่วนที่ขาด</a>
+            <a href="DisplayAddtransfer_Money.html">เพิ่มรายงานโอนเงินสมทบ</a>
+            <a href="Displaysearch.html">ค้นหารายการส่งเงินสมทบปกติ</a>
+            <a href="DisplaySearchMoney_Not_Paid_Enough.html">ค้นหารายการส่งเงินสมทบปกติส่วนที่ขาด</a>
+            <a href="DisplaySearchTranfer.html">ค้นหารายการโอนเงินสมทบ</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">การเงิน</a>
+        <div class="dropdown-content">
+            <a href="#">ใบฎีกาเบิกค่าใช้จ่าย</a>
+            <a href="#">รายการรับเงินสมทบ</a>
+            <a href="#">รายการเงินโอน</a>
+            <a href="#">รายการคืนเงินเกิน</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">ตรวจสอบ</a>
+        <div class="dropdown-content">
+            <a href="#">---</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">บัญชี</a>
+        <div class="dropdown-content">
+            <a href="#">รายการปรับปรุงบัญชี</a>
+            <a href="#">รายการรอบันทึกประจำวัน</a>
+            <a href="#">รายการปรับปรุงสินทรัพย์</a>
+            <a href="#">รายการรับชำระเงิน</a>
+            <a href="#">เพิ่มบัญชีธนาคาร</a>
+            <a href="#">ปิดบัญชีธนาคาร</a>
+            <a href="#">รายงานประจำวัน</a>
+            <a href="#">รายงานประจำเดือน</a>
+        </div>
+    </li>
+</ul>
+
+ </div>
+<!--End manu bar-->
+
+<br><br>
+<div class="row">
+  <div class="column side">
+   
+  </div>
+  <div class="column middle">
+
+  <form name="search_form" method="POST" action="Search_Data/DisplaySearchMoney_Not_Paid_Enough.php">
+
+  Search: <input type="text" name="search_box" value="" />
+
+  <input type="submit" name="search" value="ค้นหารายการส่งเงินสมทบปกติส่วนที่ขาด">
+  </form>
+</div>
+  <div class="column side">
+    
+  </div>
+</div>
+
+  
+  <table width="70%" cellpadding="5" cellspace="5">
+
+<div class="footer">
+  <br><br><br><br><br>
+</div>
+
+</body>
+</html>

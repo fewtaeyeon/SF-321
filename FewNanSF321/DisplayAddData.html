@@ -1,0 +1,295 @@
+1<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>เพิ่มข้อมูลรายการรับเงินสมทบ</title>
+  <link rel="stylesheet" href="CSS/CSS.css">
+</head>
+
+<body>
+   <div class="flex-container">
+    <header>
+        <section>
+            <div><img src="image/apple-touch-icon.jpg" width="150px" height="150px"></div>
+            <h2>ระบบสารสนเทศและฐานข้อมูล</h2>
+        </section>
+    </header>
+
+<!--manu bar-->
+
+<nav class="nav">
+    <ul>
+    <li><a href="#home">เมนูหลัก</a></li>
+    <li class="dropdown"><a href="javascript:void(0)" class="drop1btn">บริหาร</a>
+        <div class="dropdown-content">
+            <a href="#">ทะเบียนหนังสือรับ</a>
+            <a href="#">ทะเบียนหนังสือส่ง</a>
+            <a href="#">เลขคุรุภัณฑ์</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">รายได้</a>
+        <div class="dropdown-content">
+            <a href="DisplayAddData.html">เพิ่มรายการส่งเงินสมทบปกติ</a>
+            <a href="DisplayAddDataMoney_Not_Paid_Enough.html">เพิ่มรายการส่งเงินสมทบส่วนที่ขาด</a>
+            <a href="DisplayAddtransfer_Money.html">เพิ่มรายงานโอนเงินสมทบ</a>
+            <a href="Displaysearch.html">ค้นหารายการส่งเงินสมทบปกติ</a>
+            <a href="DisplaySearchMoney_Not_Paid_Enough.html">ค้นหารายการส่งเงินสมทบปกติส่วนที่ขาด</a>
+            <a href="DisplaySearchTranfer.html">ค้นหารายการโอนเงินสมทบ</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">การเงิน</a>
+        <div class="dropdown-content">
+            <a href="#">ใบฎีกาเบิกค่าใช้จ่าย</a>
+            <a href="#">รายการรับเงินสมทบ</a>
+            <a href="#">รายการเงินโอน</a>
+            <a href="#">รายการคืนเงินเกิน</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">ตรวจสอบ</a>
+        <div class="dropdown-content">
+            <a href="#">---</a>
+        </div>
+    </li>
+    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">บัญชี</a>
+        <div class="dropdown-content">
+            <a href="#">รายการปรับปรุงบัญชี</a>
+            <a href="#">รายการรอบันทึกประจำวัน</a>
+            <a href="#">รายการปรับปรุงสินทรัพย์</a>
+            <a href="#">รายการรับชำระเงิน</a>
+            <a href="#">เพิ่มบัญชีธนาคาร</a>
+            <a href="#">ปิดบัญชีธนาคาร</a>
+            <a href="#">รายงานประจำวัน</a>
+            <a href="#">รายงานประจำเดือน</a>
+        </div>
+    </li>
+</ul>
+
+ </div>
+<!--End manu bar-->
+
+<div class="row">
+
+  <div class="column side">
+   
+  </div>
+  <div class="column middle">
+
+    <h1>เพิ่มรายการส่งเงินสมทบปกติ</h1>
+ 
+  <form action="Add/AddData.php" method="post">
+
+    <table>
+
+    <tr>
+      <th>เลขที่หนังสือ</th> 
+      <th><input type="text" name="CorrespondenceNumber"></th>
+    </tr>
+
+    <tr>
+      <th>เอกสาร</th>
+      <th><input type="text" name="Document"><br/></th>
+    </tr>
+
+    <tr>
+      <th>วันที่รับ</th>
+      <th><input type="date" name="ReceiveDate"><br/></th>
+    </tr>
+
+    <tr>
+      <th>จังหวัด</th>
+      <th><input type="text" name="Province"><br/></th>
+    </tr>
+
+    <tr>
+      <th>อำเภอ</th>
+      <th><input type="text" name="District"><br/></th>
+    </tr>
+
+    <tr>
+      <th>อปท.</th>
+      <th><input type="text" name="DLA"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ประเภทการส่ง</th>
+      <th><input type="text" name="ContributionType"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ฉบับที่</th>
+      <th><input type="int" name="IssuanceNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>งบประมาณปี</th>
+      <th><input type="int" name="AnnualBudget"><br/></th>
+    </tr>
+
+
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+
+
+
+
+    <tr>
+      <th>ประมาณการ</th>
+      <th><input type="decimal" name="Estimate"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก เงินอุดหนุน</th>
+      <th><input type="decimal" name="DeductionSubsidy"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก เงินกู้</th>
+      <th><input type="decimal" name="DeductionLoan"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก เงินอุทิศให้</th>
+      <th><input type="decimal" name="DeductionDedicated"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก พันธบัตร</th>
+      <th><input type="decimal" name="DeductionBond"><br/></th>
+    </tr>
+
+    <tr>
+      <th>คงเหลือ</th>
+      <th><input type="decimal" name="Balance"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ส่งเงินสมทบ</th>
+      <th><input type="decimal" name="ContributionRate"><br/></th>
+    </tr>
+
+    <tr>
+      <th>รวม รายการเพิ่มเติมส่วนที่ขาด</th>
+      <th><input type="decimal" name="IncludeAdditionalMissingItems"><br/></th>
+    </tr>
+
+    <tr>
+      <th>รวมเงินสมทบก่อนหักค่าใช้จ่าย</th>
+      <th><input type="decimal" name="IncludeContributionsBeforeDeductingExpenses"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก ค่าใช้จ่ายทางสังกัด</th>
+      <th><input type="decimal" name="DeductionExpenses"><br/></th>
+    </tr>
+
+    <tr>
+      <th>หัก ส่วนที่เกิน</th>
+      <th><input type="decimal" name="DeductionExcess"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เงินสมทบที่ต้องส่งจำนวน</th>
+      <th><input type="decimal" name="CalculateContributionToBeSubmitted"><br/></th>
+    </tr>
+
+
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+    <tr> <th></th><th></th> </tr>
+
+    <tr>
+      <th>วิธีการส่ง</th>
+      <th><input type="text" name="SendingMethod"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่เช็ค</th>
+      <th><input type="text" name="CheckNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่แคชเชียร์เช็ค</th>
+      <th><input type="text" name="CashierNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่ตั๋วแลกเงิน</th>
+      <th><input type="text" name="BillNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่ธนาณัติ</th>
+      <th><input type="text" name="MoneyOrderNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่บัญชี</th>
+      <th><input type="text" name="AccountNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ปณ.</th>
+      <th><input type="text" name="ZipCode"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ลงวันที่</th>
+      <th><input type="date" name="Date"><br/></th>
+    </tr>
+
+    <tr>
+      <th>ธนาคาร</th>
+      <th><input type="text" name="Bank"><br/></th>
+    </tr>
+
+    <tr>
+      <th>สาขา</th>
+      <th><input type="text" name="Branch"><br/></th>
+    </tr>
+
+    <tr>
+      <th>จำนวนเงิน (บาท)</th>
+      <th><input type="decimal" name="Amount"><br/></th>
+    </tr>
+
+    <tr>
+      <th>วันที่รับเงิน</th>
+      <th><input type="date" name="MoneyReceiveDate"><br/></th>
+    </tr>
+
+    <tr>
+      <th>เลขที่ใบเสร็จ</th>
+      <th><input type="text" name="ReceiptNumber"><br/></th>
+    </tr>
+
+    <tr>
+      <th>สร้างวันที่</th>
+      <th><input type="date" name="EditDate"><br/></th>
+    </tr>
+
+    <tr>
+      <th>สร้างโดย</th>
+      <th><input type="text" name="EditBy"><br/></th>
+    </tr>
+
+    <td><input type="submit" value="Insert"></td>
+
+    </table>
+
+  </form>
+
+  </div>
+  <div class="column side">
+    
+  </div>
+</div>
+<div class="footer">
+  <br><br><br><br><br>
+</div>
+
+</body>
+</html>
